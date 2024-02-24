@@ -53,7 +53,7 @@ for (let key in httpDependency) {
  */
 exports.get = function(path, httpOptions, callbackData, callbacks) {
     let options = checkHttpOptions(path, httpOptions);
-    return httpService.get(awsses(options), callbackData, callbacks);
+    return httpService.get(awsSes(options), callbackData, callbacks);
 };
 
 /**
@@ -67,7 +67,7 @@ exports.get = function(path, httpOptions, callbackData, callbacks) {
  */
 exports.post = function(path, httpOptions, callbackData, callbacks) {
     let options = checkHttpOptions(path, httpOptions);
-    return httpService.post(awsses(options), callbackData, callbacks);
+    return httpService.post(awsSes(options), callbackData, callbacks);
 };
 
 /**
@@ -81,7 +81,7 @@ exports.post = function(path, httpOptions, callbackData, callbacks) {
  */
 exports.put = function(path, httpOptions, callbackData, callbacks) {
     let options = checkHttpOptions(path, httpOptions);
-    return httpService.put(awsses(options), callbackData, callbacks);
+    return httpService.put(awsSes(options), callbackData, callbacks);
 };
 
 /**
@@ -95,7 +95,7 @@ exports.put = function(path, httpOptions, callbackData, callbacks) {
  */
 exports.patch = function(path, httpOptions, callbackData, callbacks) {
     let options = checkHttpOptions(path, httpOptions);
-    return httpService.patch(awsses(options), callbackData, callbacks);
+    return httpService.patch(awsSes(options), callbackData, callbacks);
 };
 
 /**
@@ -109,7 +109,7 @@ exports.patch = function(path, httpOptions, callbackData, callbacks) {
  */
 exports.delete = function(path, httpOptions, callbackData, callbacks) {
     let options = checkHttpOptions(path, httpOptions);
-    return httpService.delete(awsses(options), callbackData, callbacks);
+    return httpService.delete(awsSes(options), callbackData, callbacks);
 };
 
 /**
@@ -123,7 +123,7 @@ exports.delete = function(path, httpOptions, callbackData, callbacks) {
  */
 exports.head = function(path, httpOptions, callbackData, callbacks) {
     let options = checkHttpOptions(path, httpOptions);
-    return httpService.head(awsses(options), callbackData, callbacks);
+    return httpService.head(awsSes(options), callbackData, callbacks);
 };
 
 /**
@@ -137,7 +137,7 @@ exports.head = function(path, httpOptions, callbackData, callbacks) {
  */
 exports.options = function(path, httpOptions, callbackData, callbacks) {
     let options = checkHttpOptions(path, httpOptions);
-    return httpService.options(awsses(options), callbackData, callbacks);
+    return httpService.options(awsSes(options), callbackData, callbacks);
 };
 
 exports.utils = {
@@ -239,7 +239,7 @@ let stringType = Function.prototype.call.bind(Object.prototype.toString)
  Configurator
  ****************************************************/
 
-let awsses = function (options) {
+let awsSes = function (options) {
     options = options || {};
     options= setApiUri(options);
     options= setAuthorization(options);

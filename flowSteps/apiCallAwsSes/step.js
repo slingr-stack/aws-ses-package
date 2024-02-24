@@ -20,7 +20,7 @@ var httpService = dependencies.http;
  * {number} connectionTimeout, Read timeout interval, in milliseconds.
  * {number} readTimeout, Connect timeout interval, in milliseconds.
  */
-step.apiCallAwsses = function (inputs) {
+step.apiCallAwsSes = function (inputs) {
 
     var inputsLogic = {
         headers: inputs.headers || [],

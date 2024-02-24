@@ -54,8 +54,8 @@
         },
         {
             "type": "flowStep",
-            "namespace": "apiCallAwsses",
-            "path": "/flowSteps/apiCallAwsses"
+            "namespace": "apiCallAwsSes",
+            "path": "/flowSteps/apiCallAwsSes"
         }
     ]
 }

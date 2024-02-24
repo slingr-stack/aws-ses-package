@@ -1,6 +1,6 @@
 {
   "label": "API call to Aws ses",
-  "name": "apiCallAwsses",
+  "name": "apiCallAwsSes",
   "category": "integrations",
   "description": "This flow step will send generic request to Aws ses",
   "inputs": [
