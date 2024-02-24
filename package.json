@@ -1,6 +1,6 @@
 {
     "name": "awsses",
-    "label": "AWS ses Package",
+    "label": "AWS SES Package",
     "dependencies": [
         {
             "type": "service",

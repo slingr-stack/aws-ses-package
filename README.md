@@ -29,12 +29,12 @@ The Javascript API of the awsses package has two pieces:
 ## HTTP requests
 You can make `GET`,`PUT`,`POST`,`DELETE` requests to the [awsses API](https://docs.aws.amazon.com/ses/latest/APIReference-V2/Welcome.html) like this:
 ```javascript
-var response = app.endpoints.awsSes.post('/v2/email/outbound-emails', body)
-var response = app.endpoints.awsSes.post('/v2/email/outbound-emails')
-var response = app.endpoints.awsSes.delete('/v2/email/templates/:TemplateName')
-var response = app.endpoints.awsSes.get('/v2/email/deliverability-dashboard')
-var response = app.endpoints.awsSes.put('/v2/email/configuration-sets/:ConfigurationSetName/tracking-options', body)
-var response = app.endpoints.awsSes.put('/v2/email/configuration-sets/:ConfigurationSetName/tracking-options')
+var response = app.endpoints.awsses.post('/v2/email/outbound-emails', body)
+var response = app.endpoints.awsses.post('/v2/email/outbound-emails')
+var response = app.endpoints.awsses.delete('/v2/email/templates/:TemplateName')
+var response = app.endpoints.awsses.get('/v2/email/deliverability-dashboard')
+var response = app.endpoints.awsses.put('/v2/email/configuration-sets/:ConfigurationSetName/tracking-options', body)
+var response = app.endpoints.awsses.put('/v2/email/configuration-sets/:ConfigurationSetName/tracking-options')
 ```
 
 Please take a look at the documentation of the [HTTP service](https://github.com/slingr-stack/http-service)
