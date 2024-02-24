@@ -8,31 +8,33 @@
     </thead>
     <tbody>
     <tr>
-        <td>Skeleton package</td>
-        <td>January 3, 2024</td>
-        <td>Detailed description of the API of the Skeleton package.</td>
+        <td>AWS ses package</td>
+        <td>February 23, 2024</td>
+        <td>Detailed description of the API of the AWS ses package.</td>
     </tr>
     </tbody>
 </table>
 
 # Overview
 
+Amazon SES is a cloud-based email service provider that can integrate into any application for high volume email automation. Whether you use an email software to send transactional emails, marketing emails, or newsletter emails, you pay only for what you use. Amazon SES is an email tool that also supports a variety of deployments including dedicated, shared, or owned IP addresses. Reports on sender statistics and email deliverability tools help businesses make every email count.
+
 # Javascript API
 
-The Javascript API of the skeleton package has two pieces:
+The Javascript API of the awsses package has two pieces:
 
 - **HTTP requests**
 - **Flow steps**
 
 ## HTTP requests
-You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [skeleton API](API_URL_HERE) like this:
+You can make `GET`,`PUT`,`POST`,`DELETE` requests to the [awsses API](https://docs.aws.amazon.com/ses/latest/APIReference-V2/Welcome.html) like this:
 ```javascript
-var response = pkg.skeleton.api.get('/path3')
-var response = pkg.skeleton.api.put('/path1/:testPath', body)
-var response = pkg.skeleton.api.put('/path1/:testPath')
-var response = pkg.skeleton.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '', body)
-var response = pkg.skeleton.api.patch('/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '')
-var response = pkg.skeleton.api.delete('/path4')
+var response = app.endpoints.awsSes.post('/v2/email/outbound-emails', body)
+var response = app.endpoints.awsSes.post('/v2/email/outbound-emails')
+var response = app.endpoints.awsSes.delete('/v2/email/templates/:TemplateName')
+var response = app.endpoints.awsSes.get('/v2/email/deliverability-dashboard')
+var response = app.endpoints.awsSes.put('/v2/email/configuration-sets/:ConfigurationSetName/tracking-options', body)
+var response = app.endpoints.awsSes.put('/v2/email/configuration-sets/:ConfigurationSetName/tracking-options')
 ```
 
 Please take a look at the documentation of the [HTTP service](https://github.com/slingr-stack/http-service)
@@ -204,8 +206,7 @@ Generic flow step for full use of the entire package and its services.
 For more information about how shortcuts or flow steps work, and how they are generated, take a look at the [slingr-helpgen tool](https://github.com/slingr-stack/slingr-helpgen).
 
 ## Dependencies
-* HTTP Service (v1.3.7)
-* Oauth Package (v1.0.19) // TODO review and remove if its needed
+* HTTP Service (v1.5.0)
 
 ## About SLINGR
 
