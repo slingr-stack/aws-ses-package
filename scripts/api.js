@@ -265,7 +265,7 @@ function setAuthorization(options) {
         accessKeyID: config.get("accessKeyID"),
         secretAccessKey: config.get("secretAccessKey"),
         region:config.get("region"),
-        serviceName: "email"
+        serviceName: "ses"
     });
     options.authorization = authorization;
     return options;
